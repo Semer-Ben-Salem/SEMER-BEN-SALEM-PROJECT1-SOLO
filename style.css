@@ -2,10 +2,11 @@
 .col {
     width: 50px;
     height: 50px;
-    background-color: burlywood;
+    background-color: green;
     display: inline-block;
     border-right: 1px solid #000000;
     border-bottom: 1px solid #000000;
+    vertical-align: top;
 }
 
 /* rows */
@@ -33,7 +34,7 @@ body {
 
 /* hovring color */
 .col.hidden:hover {
-    background-color: burlywood;
+    background-color: orange;
 }
 
 /* delet the line in last row */

@@ -10,7 +10,7 @@ function createBoard(rows, cols) {
         .addClass('col hidden')
         .attr('data-col',j)
         .attr('data-row',i);
-        if (Math.random() < 0.1){
+        if (Math.random() < 0.5){
             $col.addClass('mine');
         }
         $row.append($col);
@@ -58,7 +58,7 @@ function createBoard(rows, cols) {
   
      
      
-          helper(i + di, j + dj);
+          helper(i , j );
               
       
     }
@@ -75,6 +75,9 @@ function createBoard(rows, cols) {
         gameOver(false);
     }   else {
         reveal(row, col)
+        const isGameOver = $('.col.hidden').length === $('.col.mine').length
+        console.log(isGameOver)
+    if (isGameOver) gameOver(true);
     } 
 })
 
