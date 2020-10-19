@@ -1,11 +1,21 @@
 .grid {
-    width: 1200px;
+    width: 1050px;
+    height: 100%;
+    margin: auto;
+    margin-top: 100px;
 }
 
 .grid div {
     width: 100px;
-    border: solid;
-    height: 50px;
+    border: 0.5px groove ;
+    /* border-bottom:; */
+    height: 75px;
     display:table;
     float: left
+}
+
+.gridstyle {
+    background-image: url(./image/Grenade-Explosion.png);
+    background-position: center;
+    background-repeat: no-repeat;
 }
