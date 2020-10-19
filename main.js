@@ -20,9 +20,19 @@
 
 document.addEventListener('DOMContentLoaded', () =>{
 
-const cardArray =
+const array = []
+for (var i=0 ; i<5 ; i++){
+    array.push(Math.floor(Math.random()*2))
+}
 
+const grid = document.querySelector('.grid')
+// creat the game board
 
+function creatBoard (){
 
+    for (let i=0 ; i<5 ; i++){
+
+    }
+}
 
 })
