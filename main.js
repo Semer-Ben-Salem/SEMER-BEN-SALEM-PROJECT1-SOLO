@@ -1,5 +1,6 @@
 const $board = $('#board') ;
-
+const ROWS=10;
+const COLS=10;
 function createBoard(rows, cols) {
     $board.empty();
     for (var i = 0; i < rows; i++) {
@@ -7,6 +8,8 @@ function createBoard(rows, cols) {
       for (var j = 0; j < cols; j++) {
         const $col = $('<div>')
         .addClass('col hidden')
+        .attr('data-col',j)
+        .attr('data-row',i);
         if (Math.random() < 0.1){
             $col.addClass('mine');
         }
@@ -31,12 +34,48 @@ function createBoard(rows, cols) {
       restart();
  }
   
+ function reveal (oi, oj){
+     const seen ={}
+ }
+
+ function reveal(oi, oj) {
+    const seen = {};
+  
+    function helper(i, j) {
+      if (i >= ROWS || j >= COLS || i < 0 || j < 0) return;
+      const key = `${i} ${j}`
+      if (seen[key]) return;
+      const $cell =
+        $(`.col.hidden[data-row=${i}][data-col=${j}]`);
+      if (
+        !$cell.hasClass('hidden') ||
+        $cell.hasClass('mine')
+      ) {
+        return;
+      }
+  
+      $cell.removeClass('hidden');
+  
+     
+     
+          helper(i + di, j + dj);
+              
+      
+    }
+  
+    helper(oi, oj);
+  }
 
   $board.on('click', '.col.hidden', function(){
     const $cell = $(this);
+    const row = $cell.data('row');
+    const col = $cell.data('col');
+    console.log(row, col);
     if ($cell.hasClass('mine')){
         gameOver(false);
-    }    
+    }   else {
+        reveal(row, col)
+    } 
 })
 
 restart();
