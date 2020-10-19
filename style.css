@@ -1,4 +1,4 @@
-.grid {
+/* .grid {
     width: 1050px;
     height: 100%;
     margin: auto;
@@ -18,4 +18,12 @@
     background-position: center;
     background-repeat: no-repeat;
     opacity: 100%;
+} */
+
+
+.grid {
+    display:flex;
+    flex-wrap: wrap;
+    height: 300px;
+    width: 400px;
 }
