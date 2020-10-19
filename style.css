@@ -7,6 +7,7 @@
     border-right: 1px solid #000000;
     border-bottom: 1px solid #000000;
     vertical-align: top;
+    transition: all 1.5s;
 }
 
 /* rows */
@@ -49,6 +50,6 @@ body {
 
 /* bizz */
 
-.col.hidden.mine {
+/* .col.hidden.mine {
     background-color: red;
-}
+} */

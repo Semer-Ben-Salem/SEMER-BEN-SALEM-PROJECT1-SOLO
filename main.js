@@ -30,8 +30,11 @@ function createBoard(rows, cols) {
     } else {
       message = 'YOU LOST!';
      }
-      alert(message);
-      restart();
+     setTimeout(function() {
+        alert(message);
+        restart();
+      }, 700);
+    
  }
   
  function reveal (oi, oj){
