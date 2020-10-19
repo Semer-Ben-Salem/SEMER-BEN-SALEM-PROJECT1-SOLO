@@ -20,7 +20,7 @@ function createBoard(rows, cols) {
   }
   
   function restart (){
-      createBoard(5, 5)
+      createBoard(9, 9)
   }
 
   function gameOver(isWin) {
