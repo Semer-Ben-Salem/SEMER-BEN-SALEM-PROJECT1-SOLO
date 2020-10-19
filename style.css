@@ -1,3 +1,5 @@
+
+
 /* columns */
 .col {
     width: 50px;
@@ -17,7 +19,7 @@
 
 /* the div */
 #board {
-    border: 1px solid #000000;
+    border: 1px solid #ffffff;
     display: inline-block;
 }
 
@@ -25,6 +27,12 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
+    background-color: black;
+    /* background-image: url(./image/image\ 01.jpg); */
+    background-repeat: no-repeat;
+    color: rgb(211, 51, 211);
+    margin-top: 5em;
+    
 }
 
 /*when the columns are hidden */
@@ -53,3 +61,19 @@ body {
 /* .col.hidden.mine {
     background-color: red;
 } */
+
+/* button */ 
+
+button {
+    color: brown;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    height: 40px;
+    margin-top: 10px;
+    margin-right: 5px;
+}
+.btn1 {
+    color: red;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
