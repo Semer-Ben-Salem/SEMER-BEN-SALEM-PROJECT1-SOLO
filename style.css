@@ -8,7 +8,6 @@
 .grid div {
     width: 100px;
     border: 0.5px groove ;
-    /* border-bottom:; */
     height: 75px;
     display:table;
     float: left
@@ -18,4 +17,5 @@
     background-image: url(./image/Grenade-Explosion.png);
     background-position: center;
     background-repeat: no-repeat;
+    opacity: 100%;
 }
