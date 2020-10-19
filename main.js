@@ -1,11 +1,14 @@
-const $grid = ('#grid') ;
+const $board = $('#board') ;
 
-function CreatGrid (rows,columns){
-
-    for (var i=0 ; i<rows ; i++){
-        const $rows = $('<div>').addClass('rows');
-        $grid.append($row);
+function createBoard(rows, cols) {
+    for (var i = 0; i < rows; i++) {
+      const $row = $('<div>').addClass('row');
+      for (var j = 0; j < cols; j++) {
+        const $col = $('<div>').addClass('col')
+        $row.append($col);
+      }
+      $board.append($row);
     }
-}
+  }
 
-CreatGrid (10,10)
+  createBoard (10,10)
