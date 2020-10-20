@@ -10,7 +10,7 @@ function createBoard(rows, cols) {
         .addClass('col hidden')
         .attr('data-col',j)
         .attr('data-row',i);
-        if (Math.random() < 0.5){
+        if (Math.random() < 0.9){
             $col.addClass('mine');
         }
         $row.append($col);
@@ -20,7 +20,7 @@ function createBoard(rows, cols) {
   }
   
   function restart (){
-      createBoard(20, 20)
+      createBoard(10, 10)
   }
 
   function gameOver(isWin) {
